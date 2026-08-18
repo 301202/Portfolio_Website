@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YOUR NAME — 3D / 2D Artist</title>
+<meta name="description" content="Daniel Seyram Tamakloe — 3D artist. Animation, modeling, and visual development.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Faint background viewport grid -->
+<div class="viewport-grid" aria-hidden="true"></div>
+
+<!-- HUD-style corner readouts (signature detail) -->
+<div class="hud hud-tl" aria-hidden="true">REEL_2026</div>
+<div class="hud hud-tr" aria-hidden="true"><span id="clock">00:00:00</span></div>
+<div class="hud hud-bl" aria-hidden="true">FOV 50MM</div>
+<div class="hud hud-br" aria-hidden="true">X 0.00 / Y 0.00 / Z 1.00</div>
+
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-name">DANIEL<br>SEYRAM TAMAKLOE</span>
+  </div>
+
+  <nav class="social-links" aria-label="Contact and social links">
+    <a href="mailto:dansey2002@outlook.com">EMAIL</a>
+    <a href="https://www.artstation.com/degr8" target="_blank" rel="noopener">ARTSTATION</a>
+    <a href="https://www.instagram.com/grey_degr8_" target="_blank" rel="noopener">INSTAGRAM</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="hero-eyebrow">// 3D — animation, modeling, visual development</p>
+    <h1 class="hero-title">Selected<br>Work</h1>
+  </section>
+
+  <div class="filter-bar" role="tablist" aria-label="Filter projects by category">
+    <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">ALL</button>
+    <button class="filter-btn" data-filter="3d" role="tab" aria-selected="false">3D</button>
+    <button class="filter-btn" data-filter="2d" role="tab" aria-selected="false">2D</button>
+    <button class="filter-btn" data-filter="art" role="tab" aria-selected="false">ART</button>
+    <button class="filter-btn" data-filter="animation" role="tab" aria-selected="false">ANIMATION</button>
+    <button class="filter-btn" data-filter="gamedev" role="tab" aria-selected="false">GAMEDEV</button>
+  </div>
+
+  <section class="grid" id="project-grid">
+    <!-- Project cards are injected here by script.js from projects.js -->
+  </section>
+
+  <p class="grid-end">More to come!</p>
+</main>
+
+<footer class="site-footer">
+  <span>&copy; <span id="year"></span> DANIEL SERYAM TAMAKLOE</span>
+  <span class="footer-note">Built with help ;)</span>
+</footer>
+
+<!-- Lightbox for local video/image previews -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-backdrop" data-close></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close" data-close aria-label="Close preview">&times;</button>
+    <div class="lightbox-media" id="lightbox-media"></div>
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+</div>
+
+<script src="projects.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
